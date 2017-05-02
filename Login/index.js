@@ -52,7 +52,7 @@ class Login extends Component {
         {...this.props}
         haveResetPassword={!!this.props.onResetPassword}
         labels={this.getLabels()}
-        onResetPasswordClick={this.changeToResetPasswordForm}
+        onResetPasswordClick={this.props.onResetPasswordClick}
         onLogin={this.onLogin}
         showLogo={this.props.showLogoOnLogin}
       />
@@ -79,7 +79,7 @@ Login.propTypes = {
   showLogoOnResetPassword: React.PropTypes.bool,
   userIdentificationInputIcon: React.PropTypes.any,
   inputPlaceholderTextColor: React.PropTypes.string,
-
+  onResetPasswordClick: React.PropTypes.func,
   backButtonStyle: React.PropTypes.any,
   backButtonTextStyle: React.PropTypes.any,
   baseButtonStyle: React.PropTypes.any,
